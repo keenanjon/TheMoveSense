@@ -12,22 +12,22 @@ struct ContentView: View {
         TabView {
             Home()
                 .tabItem() {
-                    Image(systemName: "")
+                    Image(systemName: "house")
                     Text("Home")
                 }
             Sensors()
                 .tabItem() {
-                    Image(systemName: "")
+                    Image(systemName: "sensor.tag.radiowaves.forward")
                     Text("Sensors")
                 }
             Data()
                 .tabItem() {
-                    Image(systemName: "")
+                    Image(systemName: "recordingtape")
                     Text("Data")
                 }
             Database()
                 .tabItem() {
-                    Image(systemName: "")
+                    Image(systemName: "icloud.and.arrow.down")
                     Text("Database")
                 }
         }
