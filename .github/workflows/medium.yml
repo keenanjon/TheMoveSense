@@ -27,7 +27,7 @@ jobs:
           scheme: ${{ 'default' }}
           platform: ${{ 'iOS Simulator' }}
         run: |
-          xcodebuild clean test -project MoveSenseApp.xcodeproj -scheme "$sheme" -destination "${destination}"
+          xcodebuild clean test -project MoveSenseApp.xcodeproj -scheme "MoveSenseApp" -destination "${destination}"
       - name: Test
         env:
           scheme: ${{ 'default' }}
