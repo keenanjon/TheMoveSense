@@ -26,4 +26,4 @@ jobs:
           platform: ${{ 'iOS Simulator' }}
         run: |
           xcodebuild clean -project MoveSenseApp.xcodeproj -scheme MoveSenseApp | xcpretty
-          xcodebuild test -project MoveSenseApp.xcodeproj -scheme MoveSenseApp -destination 'platform=iOS Simulator' | xcpretty -s
+          xcodebuild test -project MoveSenseApp.xcodeproj -scheme MoveSenseApp -destination 'platform=iOS Simulator, name=iPhone 11,OS=15.2' | xcpretty -s
