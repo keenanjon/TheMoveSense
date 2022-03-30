@@ -11,6 +11,7 @@
 		067F1FB327EC5EE50006C3AC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067F1FB227EC5EE50006C3AC /* ContentView.swift */; };
 		067F1FB527EC5EE60006C3AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 067F1FB427EC5EE60006C3AC /* Assets.xcassets */; };
 		067F1FB827EC5EE60006C3AC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 067F1FB727EC5EE60006C3AC /* Preview Assets.xcassets */; };
+		D571DBDAA4E7D06D7AD259AF /* Pods_MoveSenseApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F581BBF8EB3665C3F814728 /* Pods_MoveSenseApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,9 @@
 		067F1FB227EC5EE50006C3AC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		067F1FB427EC5EE60006C3AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		067F1FB727EC5EE60006C3AC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		5F581BBF8EB3665C3F814728 /* Pods_MoveSenseApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MoveSenseApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		72B4E5FF8B4940C9EC219825 /* Pods-MoveSenseApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoveSenseApp.release.xcconfig"; path = "Target Support Files/Pods-MoveSenseApp/Pods-MoveSenseApp.release.xcconfig"; sourceTree = "<group>"; };
+		D850FF8B2D19CA5F2C569AEC /* Pods-MoveSenseApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoveSenseApp.debug.xcconfig"; path = "Target Support Files/Pods-MoveSenseApp/Pods-MoveSenseApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +30,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D571DBDAA4E7D06D7AD259AF /* Pods_MoveSenseApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -37,6 +42,8 @@
 			children = (
 				067F1FAF27EC5EE50006C3AC /* MoveSenseApp */,
 				067F1FAE27EC5EE50006C3AC /* Products */,
+				2FFBD05792985A212A22CC9A /* Pods */,
+				3E40EBCB912263B57559846A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +74,24 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		2FFBD05792985A212A22CC9A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D850FF8B2D19CA5F2C569AEC /* Pods-MoveSenseApp.debug.xcconfig */,
+				72B4E5FF8B4940C9EC219825 /* Pods-MoveSenseApp.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		3E40EBCB912263B57559846A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5F581BBF8EB3665C3F814728 /* Pods_MoveSenseApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 067F1FBB27EC5EE60006C3AC /* Build configuration list for PBXNativeTarget "MoveSenseApp" */;
 			buildPhases = (
+				F97D762ABC616B8EB8142699 /* [CP] Check Pods Manifest.lock */,
 				067F1FA927EC5EE50006C3AC /* Sources */,
 				067F1FAA27EC5EE50006C3AC /* Frameworks */,
 				067F1FAB27EC5EE50006C3AC /* Resources */,
+				A563CFF904C2078A33B2582B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -131,6 +158,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A563CFF904C2078A33B2582B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MoveSenseApp/Pods-MoveSenseApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MoveSenseApp/Pods-MoveSenseApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MoveSenseApp/Pods-MoveSenseApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F97D762ABC616B8EB8142699 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MoveSenseApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		067F1FA927EC5EE50006C3AC /* Sources */ = {
@@ -261,6 +330,7 @@
 		};
 		067F1FBC27EC5EE60006C3AC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D850FF8B2D19CA5F2C569AEC /* Pods-MoveSenseApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -290,6 +360,7 @@
 		};
 		067F1FBD27EC5EE60006C3AC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 72B4E5FF8B4940C9EC219825 /* Pods-MoveSenseApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
