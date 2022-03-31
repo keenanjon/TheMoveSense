@@ -13,6 +13,7 @@ struct Peripheral: Identifiable {
     let id: Int
     let name: String
     let rssi: Int
+    let uuid: UUID
 }
 
 
@@ -47,7 +48,7 @@ class BLEManager: NSObject, ObservableObject, CBCentralManagerDelegate {
         if let name = advertisementData[CBAdvertisementDataLocalNameKey] as? String {
             print(name)
             peripheralName = name
-            let newPeripheral = Peripheral(id: peripherals.count, name: peripheralName, rssi: RSSI.intValue)
+            let newPeripheral = Peripheral(id: peripherals.count, name: peripheralName, rssi: RSSI.intValue, uuid: UUID(uuidString: peripheral.identifier.uuidString)!)
             print(newPeripheral)
             print(newPeripheral.name)
             if newPeripheral.name.contains("sense") {

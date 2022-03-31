@@ -1,8 +1,12 @@
 
 import SwiftUI
+import Movesense
+import Movesense.MDS
 
 struct Home: View {
     @ObservedObject var bleManager = BLEManager()
+    let mds = MDSWrapper()
+    
     var body: some View {
         VStack {
             
@@ -14,6 +18,11 @@ struct Home: View {
                     Text(peripheral.name)
                     Spacer()
                     Text(String(peripheral.rssi))
+                }
+                .onTapGesture {
+                    print("Clicked \(peripheral.name)")
+                    print("Clicked \(peripheral.uuid)")
+                    mds.connectPeripheral(with: peripheral.uuid)
                 }
             }.frame(height: 300)
             
