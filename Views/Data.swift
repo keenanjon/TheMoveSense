@@ -1,9 +1,4 @@
-//
-//  Data.swift
-//  MoveSenseApp
-//
-//  Created by iosdev on 31.3.2022.
-//
+
 
 import SwiftUI
 

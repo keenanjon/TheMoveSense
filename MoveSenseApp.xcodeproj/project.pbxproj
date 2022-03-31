@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0617B60227F59B5100CACA99 /* BLEManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0617B60127F59B5100CACA99 /* BLEManager.swift */; };
 		067F1FB127EC5EE50006C3AC /* MoveSenseAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067F1FB027EC5EE50006C3AC /* MoveSenseAppApp.swift */; };
 		067F1FB327EC5EE50006C3AC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067F1FB227EC5EE50006C3AC /* ContentView.swift */; };
 		067F1FB527EC5EE60006C3AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 067F1FB427EC5EE60006C3AC /* Assets.xcassets */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0617B60127F59B5100CACA99 /* BLEManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLEManager.swift; sourceTree = "<group>"; };
 		067F1FAD27EC5EE50006C3AC /* MoveSenseApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoveSenseApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		067F1FB027EC5EE50006C3AC /* MoveSenseAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveSenseAppApp.swift; sourceTree = "<group>"; };
 		067F1FB227EC5EE50006C3AC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -67,6 +69,7 @@
 		067F1FAF27EC5EE50006C3AC /* MoveSenseApp */ = {
 			isa = PBXGroup;
 			children = (
+				0617B60127F59B5100CACA99 /* BLEManager.swift */,
 				067F1FB027EC5EE50006C3AC /* MoveSenseAppApp.swift */,
 				067F1FB227EC5EE50006C3AC /* ContentView.swift */,
 				067F1FB427EC5EE60006C3AC /* Assets.xcassets */,
@@ -227,6 +230,7 @@
 			files = (
 				6A13260E27F5921900D79EF3 /* Database.swift in Sources */,
 				067F1FB327EC5EE50006C3AC /* ContentView.swift in Sources */,
+				0617B60227F59B5100CACA99 /* BLEManager.swift in Sources */,
 				6A13260C27F5920C00D79EF3 /* Data.swift in Sources */,
 				6A13260A27F5920300D79EF3 /* Sensors.swift in Sources */,
 				6A13260827F591F300D79EF3 /* Home.swift in Sources */,
@@ -357,12 +361,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MoveSenseApp/Preview Content\"";
-				DEVELOPMENT_TEAM = JRZ7ZT88JB;
+				DEVELOPMENT_TEAM = P4436377R7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "This app uses Bluetooth for scanning peripheral devices";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -373,8 +379,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.NonSense.MovesenseApp;
+				PRODUCT_BUNDLE_IDENTIFIER = NonSense.Movesense;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -387,12 +394,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MoveSenseApp/Preview Content\"";
-				DEVELOPMENT_TEAM = JRZ7ZT88JB;
+				DEVELOPMENT_TEAM = P4436377R7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "This app uses Bluetooth for scanning peripheral devices";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -403,8 +412,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.NonSense.MovesenseApp;
+				PRODUCT_BUNDLE_IDENTIFIER = NonSense.Movesense;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
