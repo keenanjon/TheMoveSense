@@ -1,6 +1,6 @@
 # TheMoveSense
 
-# Get Started
+## Get Started
   - Clone repo 
   - Navigate to the project in terminal
   - pod update
