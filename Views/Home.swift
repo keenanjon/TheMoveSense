@@ -3,9 +3,11 @@ import SwiftUI
 
 struct Home: View {
     @ObservedObject var bleManager = BLEManager()
-    private let moveSensecontroller = MoveSenseController()
+    @ObservedObject var moveSensecontroller = MoveSenseController()
     
     var body: some View {
+        let connectedDevices = moveSensecontroller.connectedPeripherals.map {$0.name}
+        
         VStack {
             
             Text("Movesenses")
@@ -14,13 +16,16 @@ struct Home: View {
             List(bleManager.peripherals) { peripheral in
                 HStack {
                     Text(peripheral.name)
-                    Spacer()
-                    Text(String(peripheral.rssi))
+                        .foregroundColor(connectedDevices.contains(peripheral.name) ? .green : .red)
                 }
                 .onTapGesture {
                     print("Clicked \(peripheral.name)")
-                    print("Clicked \(peripheral.uuid)")
-                    moveSensecontroller.connect(peripheral: peripheral)
+                    
+                    if (connectedDevices.contains(peripheral.name)) {
+                        moveSensecontroller.disconnect(peripheral: peripheral)
+                    } else {
+                        moveSensecontroller.connect(peripheral: peripheral)
+                    }
                 }
             }.frame(height: 300)
             
