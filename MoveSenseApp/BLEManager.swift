@@ -57,20 +57,13 @@ class BLEManager: NSObject, ObservableObject, CBCentralManagerDelegate {
            
             
         }
-        /*
-         else {
-         peripheralName = "Unknown"
-         }
-         */
-        /*
-         let newPeripheral = Peripheral(id: peripherals.count, name: peripheralName, rssi: RSSI.intValue)
-         print(newPeripheral)
-         peripherals.append(newPeripheral)
-         */
     }
     
     func startScanning() {
         print("startScanning")
+        if (!peripherals.isEmpty) {
+            peripherals.removeAll()
+        }
         myCentral.scanForPeripherals(withServices: nil, options: nil)
     }
     
