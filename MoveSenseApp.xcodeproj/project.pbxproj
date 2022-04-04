@@ -16,6 +16,7 @@
 		6A13260A27F5920300D79EF3 /* Sensors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A13260927F5920300D79EF3 /* Sensors.swift */; };
 		6A13260C27F5920C00D79EF3 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A13260B27F5920C00D79EF3 /* Data.swift */; };
 		6A13260E27F5921900D79EF3 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A13260D27F5921900D79EF3 /* Database.swift */; };
+		6A39335A27FAE23300F2AB9A /* MoveSenseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A39335927FAE23300F2AB9A /* MoveSenseController.swift */; };
 		6AD454F227F5E4D10033A614 /* Movesense.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AD454F127F5E4D10033A614 /* Movesense.framework */; };
 		6AD454F427F5E6D60033A614 /* libmds.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AD454F327F5E6D60033A614 /* libmds.a */; };
 		D571DBDAA4E7D06D7AD259AF /* Pods_MoveSenseApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F581BBF8EB3665C3F814728 /* Pods_MoveSenseApp.framework */; };
@@ -33,6 +34,7 @@
 		6A13260927F5920300D79EF3 /* Sensors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sensors.swift; sourceTree = "<group>"; };
 		6A13260B27F5920C00D79EF3 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		6A13260D27F5921900D79EF3 /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
+		6A39335927FAE23300F2AB9A /* MoveSenseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveSenseController.swift; sourceTree = "<group>"; };
 		6AD454EF27F5DCC40033A614 /* Movesense.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Movesense.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AD454F127F5E4D10033A614 /* Movesense.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Movesense.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AD454F327F5E6D60033A614 /* libmds.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libmds.a; path = "Pods/Movesense/IOS/Movesense/Release-iphoneos/libmds.a"; sourceTree = "<group>"; };
@@ -57,6 +59,7 @@
 		067F1FA427EC5EE50006C3AC = {
 			isa = PBXGroup;
 			children = (
+				6A39335827FAE20700F2AB9A /* Controllers */,
 				6A13260627F591E400D79EF3 /* Views */,
 				067F1FAF27EC5EE50006C3AC /* MoveSenseApp */,
 				067F1FAE27EC5EE50006C3AC /* Products */,
@@ -122,6 +125,14 @@
 				6A13260D27F5921900D79EF3 /* Database.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		6A39335827FAE20700F2AB9A /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				6A39335927FAE23300F2AB9A /* MoveSenseController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -243,6 +254,7 @@
 				0617B60227F59B5100CACA99 /* BLEManager.swift in Sources */,
 				6A13260C27F5920C00D79EF3 /* Data.swift in Sources */,
 				6A13260A27F5920300D79EF3 /* Sensors.swift in Sources */,
+				6A39335A27FAE23300F2AB9A /* MoveSenseController.swift in Sources */,
 				6A13260827F591F300D79EF3 /* Home.swift in Sources */,
 				067F1FB127EC5EE50006C3AC /* MoveSenseAppApp.swift in Sources */,
 			);

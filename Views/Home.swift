@@ -1,11 +1,9 @@
 
 import SwiftUI
-import Movesense
-import Movesense.MDS
 
 struct Home: View {
     @ObservedObject var bleManager = BLEManager()
-    let mds = MDSWrapper()
+    private let moveSensecontroller = MoveSenseController()
     
     var body: some View {
         VStack {
@@ -22,7 +20,7 @@ struct Home: View {
                 .onTapGesture {
                     print("Clicked \(peripheral.name)")
                     print("Clicked \(peripheral.uuid)")
-                    mds.connectPeripheral(with: peripheral.uuid)
+                    moveSensecontroller.connect(peripheral: peripheral)
                 }
             }.frame(height: 300)
             
