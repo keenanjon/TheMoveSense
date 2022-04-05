@@ -15,11 +15,6 @@ struct ContentView: View {
                     Image(systemName: "house")
                     Text("Home")
                 }
-            Sensors()
-                .tabItem() {
-                    Image(systemName: "sensor.tag.radiowaves.forward")
-                    Text("Sensors")
-                }
             Data()
                 .tabItem() {
                     Image(systemName: "recordingtape")

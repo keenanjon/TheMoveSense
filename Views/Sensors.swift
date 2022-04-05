@@ -3,17 +3,12 @@
 import SwiftUI
 
 struct Sensors: View {
+    var peripheral: Peripheral
     var body: some View {
         ZStack {
             Color.blue
-            Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+            Text("\(peripheral.name)")
                 .foregroundColor(Color.white)
         }
-    }
-}
-
-struct Sensors_Previews: PreviewProvider {
-    static var previews: some View {
-        Sensors()
     }
 }
