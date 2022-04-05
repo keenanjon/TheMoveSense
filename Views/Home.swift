@@ -1,24 +1,83 @@
-//
-//  Home.swift
-//  MoveSenseApp
-//
-//  Created by iosdev on 31.3.2022.
-//
 
 import SwiftUI
 
 struct Home: View {
+    @ObservedObject var bleManager = BLEManager()
+    @ObservedObject var moveSensecontroller = MoveSenseController()
+    @State private var isDisplayed = false
+    @State private var isScanning = false
+    @State  private var toggles: [Bool] = [Bool]()
+    
     var body: some View {
-        ZStack {
-            Color.red
-            Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-                .foregroundColor(Color.white)
+        let connectedDevices = moveSensecontroller.connectedPeripherals.map {$0.name}
+        
+        VStack {
+            Text("Movesenses")
+                .font(.largeTitle)
+                .frame(maxWidth: .infinity, alignment: .center)
+            
+            List(bleManager.peripherals) { peripheral in
+                HStack {
+                    Text(peripheral.name)
+                        .foregroundColor(connectedDevices.contains(peripheral.name) ? .green : .red)
+                }
+                .onTapGesture {
+                    print("Clicked \(peripheral.name)")
+                    
+                    if (connectedDevices.contains(peripheral.name)) {
+                        moveSensecontroller.disconnect(peripheral: peripheral)
+                        isDisplayed = false
+                    } else {
+                        moveSensecontroller.connect(peripheral: peripheral)
+                        isDisplayed = true
+                    }
+                }
+            }.frame(height: 300)
+            
+            Spacer()
+            
+            Text("STATUS")
+                .font(.headline)
+            
+            if bleManager.isSwitchedOn {
+                Text("Bluetooth is switched on")
+                    .foregroundColor(.green)
+            }
+            else {
+                Text("Bluetooth is NOT switched on")
+                    .foregroundColor(.red)
+            }
+            
+            Spacer()
+            
+            ZStack {
+                VStack (spacing: 10) {
+                    if !isScanning {
+                        Button(action: {
+                            for peripheral in bleManager.peripherals where connectedDevices.contains(peripheral.name){
+                                moveSensecontroller.disconnect(peripheral: peripheral)
+                            }
+                            isScanning = true
+                            self.bleManager.startScanning()
+                        }) {
+                            Text("Start Scanning")
+                        }
+                    }
+                }.padding()
+                
+                VStack (spacing: 10) {
+                    if isScanning {
+                        Button(action: {
+                            self.bleManager.stopScanning()
+                            isScanning = false
+                        }) {
+                            Text("Stop Scanning")
+                        }
+                    }
+                }.padding()
+            }
+            Spacer()
         }
     }
 }
 
-struct Home_Previews: PreviewProvider {
-    static var previews: some View {
-        Home()
-    }
-}
