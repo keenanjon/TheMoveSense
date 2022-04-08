@@ -7,8 +7,12 @@ struct Sensors: View {
     var body: some View {
         ZStack {
             Color.blue
-            Text("\(peripheral.name)")
-                .foregroundColor(Color.white)
+            VStack {
+                Text("\(peripheral.name)")
+                    .foregroundColor(Color.white)
+                Text("\(peripheral.serial)")
+                    .foregroundColor(Color.white)
+            }
         }
     }
 }

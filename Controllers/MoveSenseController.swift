@@ -7,7 +7,6 @@ import SwiftUI
 class MoveSenseController: ObservableObject {
     private let mds = MDSWrapper()
     @Published var connectedPeripherals = [Peripheral]()
-    
     func connect(peripheral: Peripheral) {
         mds.connectPeripheral(with: peripheral.uuid)
         connectedPeripherals.append(peripheral)
