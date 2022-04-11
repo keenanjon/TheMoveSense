@@ -15,7 +15,7 @@ struct ContentView: View {
                     Image(systemName: "house")
                     Text("Home")
                 }
-            Data()
+            Tata()
                 .tabItem() {
                     Image(systemName: "recordingtape")
                     Text("Data")

@@ -28,7 +28,9 @@ struct Home: View {
                                     isDisplayed = false
                                 } else {
                                     moveSensecontroller.connect(peripheral: peripheral)
+                                    print(moveSensecontroller.objectWillChange)
                                     isDisplayed = true
+                                    
                                 }
                             }
                         
@@ -91,4 +93,6 @@ struct Home: View {
         }
     }
 }
+
+
 

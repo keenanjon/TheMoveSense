@@ -7,11 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		061668A8280414EA004E6CFC /* MovesenseCodingKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06166896280414E8004E6CFC /* MovesenseCodingKeys.swift */; };
+		061668A9280414EA004E6CFC /* MovesenseConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06166897280414E8004E6CFC /* MovesenseConnection.swift */; };
+		061668AA280414EA004E6CFC /* MovesenseOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06166898280414E8004E6CFC /* MovesenseOperation.swift */; };
+		061668AB280414EA004E6CFC /* MovesenseResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06166899280414E8004E6CFC /* MovesenseResource.swift */; };
+		061668AC280414EA004E6CFC /* MovesenseBleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0616689A280414E9004E6CFC /* MovesenseBleController.swift */; };
+		061668AD280414EA004E6CFC /* MovesenseRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0616689B280414E9004E6CFC /* MovesenseRequest.swift */; };
+		061668AE280414EA004E6CFC /* Observer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0616689C280414E9004E6CFC /* Observer.swift */; };
+		061668AF280414EA004E6CFC /* MovesenseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0616689D280414E9004E6CFC /* MovesenseController.swift */; };
+		061668B0280414EA004E6CFC /* MovesenseApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0616689E280414E9004E6CFC /* MovesenseApi.swift */; };
+		061668B1280414EA004E6CFC /* MovesenseApiConcrete.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0616689F280414E9004E6CFC /* MovesenseApiConcrete.swift */; };
+		061668B2280414EA004E6CFC /* MovesenseEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061668A0280414E9004E6CFC /* MovesenseEvent.swift */; };
+		061668B3280414EA004E6CFC /* MovesenseTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061668A1280414E9004E6CFC /* MovesenseTypes.swift */; };
+		061668B4280414EA004E6CFC /* MovesenseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061668A2280414E9004E6CFC /* MovesenseModel.swift */; };
+		061668B5280414EA004E6CFC /* MovesenseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061668A3280414E9004E6CFC /* MovesenseResponse.swift */; };
+		061668B6280414EA004E6CFC /* MovesenseDeviceConcrete.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061668A4280414E9004E6CFC /* MovesenseDeviceConcrete.swift */; };
+		061668B7280414EA004E6CFC /* Collection+subscript.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061668A6280414EA004E6CFC /* Collection+subscript.swift */; };
+		061668B8280414EA004E6CFC /* MovesenseMethodParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061668A7280414EA004E6CFC /* MovesenseMethodParameter.swift */; };
 		0617B60227F59B5100CACA99 /* BLEManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0617B60127F59B5100CACA99 /* BLEManager.swift */; };
 		067F1FB127EC5EE50006C3AC /* MoveSenseAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067F1FB027EC5EE50006C3AC /* MoveSenseAppApp.swift */; };
 		067F1FB327EC5EE50006C3AC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067F1FB227EC5EE50006C3AC /* ContentView.swift */; };
 		067F1FB527EC5EE60006C3AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 067F1FB427EC5EE60006C3AC /* Assets.xcassets */; };
 		067F1FB827EC5EE60006C3AC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 067F1FB727EC5EE60006C3AC /* Preview Assets.xcassets */; };
+		06D8D4D22803FE5900139D08 /* MoveSenseController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D8D4D12803FE5900139D08 /* MoveSenseController2.swift */; };
 		6A13260827F591F300D79EF3 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A13260727F591F300D79EF3 /* Home.swift */; };
 		6A13260A27F5920300D79EF3 /* Sensors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A13260927F5920300D79EF3 /* Sensors.swift */; };
 		6A13260C27F5920C00D79EF3 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A13260B27F5920C00D79EF3 /* Data.swift */; };
@@ -23,12 +41,30 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		06166896280414E8004E6CFC /* MovesenseCodingKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovesenseCodingKeys.swift; sourceTree = "<group>"; };
+		06166897280414E8004E6CFC /* MovesenseConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovesenseConnection.swift; sourceTree = "<group>"; };
+		06166898280414E8004E6CFC /* MovesenseOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovesenseOperation.swift; sourceTree = "<group>"; };
+		06166899280414E8004E6CFC /* MovesenseResource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovesenseResource.swift; sourceTree = "<group>"; };
+		0616689A280414E9004E6CFC /* MovesenseBleController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovesenseBleController.swift; sourceTree = "<group>"; };
+		0616689B280414E9004E6CFC /* MovesenseRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovesenseRequest.swift; sourceTree = "<group>"; };
+		0616689C280414E9004E6CFC /* Observer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Observer.swift; sourceTree = "<group>"; };
+		0616689D280414E9004E6CFC /* MovesenseController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovesenseController.swift; sourceTree = "<group>"; };
+		0616689E280414E9004E6CFC /* MovesenseApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovesenseApi.swift; sourceTree = "<group>"; };
+		0616689F280414E9004E6CFC /* MovesenseApiConcrete.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovesenseApiConcrete.swift; sourceTree = "<group>"; };
+		061668A0280414E9004E6CFC /* MovesenseEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovesenseEvent.swift; sourceTree = "<group>"; };
+		061668A1280414E9004E6CFC /* MovesenseTypes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovesenseTypes.swift; sourceTree = "<group>"; };
+		061668A2280414E9004E6CFC /* MovesenseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovesenseModel.swift; sourceTree = "<group>"; };
+		061668A3280414E9004E6CFC /* MovesenseResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovesenseResponse.swift; sourceTree = "<group>"; };
+		061668A4280414E9004E6CFC /* MovesenseDeviceConcrete.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovesenseDeviceConcrete.swift; sourceTree = "<group>"; };
+		061668A6280414EA004E6CFC /* Collection+subscript.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Collection+subscript.swift"; sourceTree = "<group>"; };
+		061668A7280414EA004E6CFC /* MovesenseMethodParameter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovesenseMethodParameter.swift; sourceTree = "<group>"; };
 		0617B60127F59B5100CACA99 /* BLEManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLEManager.swift; sourceTree = "<group>"; };
 		067F1FAD27EC5EE50006C3AC /* MoveSenseApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoveSenseApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		067F1FB027EC5EE50006C3AC /* MoveSenseAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveSenseAppApp.swift; sourceTree = "<group>"; };
 		067F1FB227EC5EE50006C3AC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		067F1FB427EC5EE60006C3AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		067F1FB727EC5EE60006C3AC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		06D8D4D12803FE5900139D08 /* MoveSenseController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveSenseController2.swift; sourceTree = "<group>"; };
 		5F581BBF8EB3665C3F814728 /* Pods_MoveSenseApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MoveSenseApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A13260727F591F300D79EF3 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		6A13260927F5920300D79EF3 /* Sensors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sensors.swift; sourceTree = "<group>"; };
@@ -56,9 +92,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		061668A5280414EA004E6CFC /* extensions */ = {
+			isa = PBXGroup;
+			children = (
+				061668A6280414EA004E6CFC /* Collection+subscript.swift */,
+			);
+			path = extensions;
+			sourceTree = "<group>";
+		};
 		067F1FA427EC5EE50006C3AC = {
 			isa = PBXGroup;
 			children = (
+				061668A5280414EA004E6CFC /* extensions */,
+				0616689E280414E9004E6CFC /* MovesenseApi.swift */,
+				0616689F280414E9004E6CFC /* MovesenseApiConcrete.swift */,
+				0616689A280414E9004E6CFC /* MovesenseBleController.swift */,
+				06166896280414E8004E6CFC /* MovesenseCodingKeys.swift */,
+				06166897280414E8004E6CFC /* MovesenseConnection.swift */,
+				0616689D280414E9004E6CFC /* MovesenseController.swift */,
+				061668A4280414E9004E6CFC /* MovesenseDeviceConcrete.swift */,
+				061668A0280414E9004E6CFC /* MovesenseEvent.swift */,
+				061668A7280414EA004E6CFC /* MovesenseMethodParameter.swift */,
+				061668A2280414E9004E6CFC /* MovesenseModel.swift */,
+				06166898280414E8004E6CFC /* MovesenseOperation.swift */,
+				0616689B280414E9004E6CFC /* MovesenseRequest.swift */,
+				06166899280414E8004E6CFC /* MovesenseResource.swift */,
+				061668A3280414E9004E6CFC /* MovesenseResponse.swift */,
+				061668A1280414E9004E6CFC /* MovesenseTypes.swift */,
+				0616689C280414E9004E6CFC /* Observer.swift */,
 				6A39335827FAE20700F2AB9A /* Controllers */,
 				6A13260627F591E400D79EF3 /* Views */,
 				067F1FAF27EC5EE50006C3AC /* MoveSenseApp */,
@@ -131,6 +192,7 @@
 			isa = PBXGroup;
 			children = (
 				6A39335927FAE23300F2AB9A /* MoveSenseController.swift */,
+				06D8D4D12803FE5900139D08 /* MoveSenseController2.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -250,13 +312,31 @@
 			buildActionMask = 2147483647;
 			files = (
 				6A13260E27F5921900D79EF3 /* Database.swift in Sources */,
+				061668AE280414EA004E6CFC /* Observer.swift in Sources */,
+				061668B8280414EA004E6CFC /* MovesenseMethodParameter.swift in Sources */,
+				061668AC280414EA004E6CFC /* MovesenseBleController.swift in Sources */,
+				061668B1280414EA004E6CFC /* MovesenseApiConcrete.swift in Sources */,
+				061668B5280414EA004E6CFC /* MovesenseResponse.swift in Sources */,
 				067F1FB327EC5EE50006C3AC /* ContentView.swift in Sources */,
+				061668B0280414EA004E6CFC /* MovesenseApi.swift in Sources */,
 				0617B60227F59B5100CACA99 /* BLEManager.swift in Sources */,
+				061668B6280414EA004E6CFC /* MovesenseDeviceConcrete.swift in Sources */,
 				6A13260C27F5920C00D79EF3 /* Data.swift in Sources */,
+				061668AB280414EA004E6CFC /* MovesenseResource.swift in Sources */,
+				061668B4280414EA004E6CFC /* MovesenseModel.swift in Sources */,
+				061668A9280414EA004E6CFC /* MovesenseConnection.swift in Sources */,
+				061668AA280414EA004E6CFC /* MovesenseOperation.swift in Sources */,
+				061668AD280414EA004E6CFC /* MovesenseRequest.swift in Sources */,
 				6A13260A27F5920300D79EF3 /* Sensors.swift in Sources */,
 				6A39335A27FAE23300F2AB9A /* MoveSenseController.swift in Sources */,
+				061668AF280414EA004E6CFC /* MovesenseController.swift in Sources */,
 				6A13260827F591F300D79EF3 /* Home.swift in Sources */,
+				06D8D4D22803FE5900139D08 /* MoveSenseController2.swift in Sources */,
 				067F1FB127EC5EE50006C3AC /* MoveSenseAppApp.swift in Sources */,
+				061668B3280414EA004E6CFC /* MovesenseTypes.swift in Sources */,
+				061668B2280414EA004E6CFC /* MovesenseEvent.swift in Sources */,
+				061668B7280414EA004E6CFC /* Collection+subscript.swift in Sources */,
+				061668A8280414EA004E6CFC /* MovesenseCodingKeys.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -387,7 +467,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MoveSenseApp/Preview Content\"";
-				DEVELOPMENT_TEAM = NS26X99XW4;
+				DEVELOPMENT_TEAM = P4436377R7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "This app uses Bluetooth for scanning peripheral devices";
@@ -405,7 +485,7 @@
 					"$(PROJECT_DIR)/Pods/Movesense/IOS/Movesense/Release-iphoneos",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = fi.NonSense.Movesense;
+				PRODUCT_BUNDLE_IDENTIFIER = NonSense.Movesense;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -424,7 +504,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MoveSenseApp/Preview Content\"";
-				DEVELOPMENT_TEAM = NS26X99XW4;
+				DEVELOPMENT_TEAM = P4436377R7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "This app uses Bluetooth for scanning peripheral devices";
@@ -442,7 +522,7 @@
 					"$(PROJECT_DIR)/Pods/Movesense/IOS/Movesense/Release-iphoneos",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = fi.NonSense.Movesense;
+				PRODUCT_BUNDLE_IDENTIFIER = NonSense.Movesense;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
