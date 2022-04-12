@@ -37,6 +37,7 @@
 		067F1FB527EC5EE60006C3AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 067F1FB427EC5EE60006C3AC /* Assets.xcassets */; };
 		067F1FB827EC5EE60006C3AC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 067F1FB727EC5EE60006C3AC /* Preview Assets.xcassets */; };
 		06D8D4D22803FE5900139D08 /* MoveSenseController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D8D4D12803FE5900139D08 /* MoveSenseController2.swift */; };
+		06FB56722805867000429F3B /* Math.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06FB56712805867000429F3B /* Math.swift */; };
 		6A13260827F591F300D79EF3 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A13260727F591F300D79EF3 /* Home.swift */; };
 		6A13260A27F5920300D79EF3 /* Sensors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A13260927F5920300D79EF3 /* Sensors.swift */; };
 		6A13260C27F5920C00D79EF3 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A13260B27F5920C00D79EF3 /* Data.swift */; };
@@ -79,6 +80,7 @@
 		067F1FB427EC5EE60006C3AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		067F1FB727EC5EE60006C3AC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		06D8D4D12803FE5900139D08 /* MoveSenseController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveSenseController2.swift; sourceTree = "<group>"; };
+		06FB56712805867000429F3B /* Math.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Math.swift; sourceTree = "<group>"; };
 		5F581BBF8EB3665C3F814728 /* Pods_MoveSenseApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MoveSenseApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A13260727F591F300D79EF3 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		6A13260927F5920300D79EF3 /* Sensors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sensors.swift; sourceTree = "<group>"; };
@@ -155,6 +157,7 @@
 		067F1FA427EC5EE50006C3AC = {
 			isa = PBXGroup;
 			children = (
+				06FB56702805863300429F3B /* MathFunctions */,
 				0600E2AC280564C900265E2D /* SensorData */,
 				0600E2AB280564A700265E2D /* Api */,
 				6A39335827FAE20700F2AB9A /* Controllers */,
@@ -192,6 +195,14 @@
 				067F1FB727EC5EE60006C3AC /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		06FB56702805863300429F3B /* MathFunctions */ = {
+			isa = PBXGroup;
+			children = (
+				06FB56712805867000429F3B /* Math.swift */,
+			);
+			path = MathFunctions;
 			sourceTree = "<group>";
 		};
 		2FFBD05792985A212A22CC9A /* Pods */ = {
@@ -357,6 +368,7 @@
 				6A13260E27F5921900D79EF3 /* Database.swift in Sources */,
 				061668AE280414EA004E6CFC /* Observer.swift in Sources */,
 				061668B8280414EA004E6CFC /* MovesenseMethodParameter.swift in Sources */,
+				06FB56722805867000429F3B /* Math.swift in Sources */,
 				061668AC280414EA004E6CFC /* MovesenseBleController.swift in Sources */,
 				061668B1280414EA004E6CFC /* MovesenseApiConcrete.swift in Sources */,
 				061668B5280414EA004E6CFC /* MovesenseResponse.swift in Sources */,

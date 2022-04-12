@@ -3,7 +3,7 @@ import SwiftUI
 
 struct Home: View {
     @ObservedObject var bleManager = BLEManager()
-    @ObservedObject var moveSensecontroller = MoveSenseController()
+    @ObservedObject var moveSensecontroller = MoveSenseiController()
     @State private var isDisplayed = false
     @State private var isScanning = false
     @State  private var toggles: [Bool] = [Bool]()

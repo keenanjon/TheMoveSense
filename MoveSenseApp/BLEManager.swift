@@ -59,6 +59,8 @@ class BLEManager: NSObject, ObservableObject, CBCentralManagerDelegate {
         }
     }
     
+    
+    
     func startScanning() {
         print("startScanning")
         if (!peripherals.isEmpty) {
