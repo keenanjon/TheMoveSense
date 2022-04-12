@@ -15,11 +15,13 @@ struct ContentView: View {
                     Image(systemName: "house")
                     Text("Home")
                 }
+            /*
             Tata()
                 .tabItem() {
                     Image(systemName: "recordingtape")
                     Text("Data")
                 }
+             */
             Database()
                 .tabItem() {
                     Image(systemName: "icloud.and.arrow.down")
