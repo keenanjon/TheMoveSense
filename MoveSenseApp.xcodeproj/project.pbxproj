@@ -87,6 +87,7 @@
 		6A13260B27F5920C00D79EF3 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		6A13260D27F5921900D79EF3 /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
 		6A39335927FAE23300F2AB9A /* MoveSenseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveSenseController.swift; sourceTree = "<group>"; };
+		6A72C882280812060091527E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		6AD454EF27F5DCC40033A614 /* Movesense.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Movesense.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AD454F127F5E4D10033A614 /* Movesense.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Movesense.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AD454F327F5E6D60033A614 /* libmds.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libmds.a; path = "Pods/Movesense/IOS/Movesense/Release-iphoneos/libmds.a"; sourceTree = "<group>"; };
@@ -180,6 +181,7 @@
 		067F1FAF27EC5EE50006C3AC /* MoveSenseApp */ = {
 			isa = PBXGroup;
 			children = (
+				6A72C882280812060091527E /* Info.plist */,
 				0617B60127F59B5100CACA99 /* BLEManager.swift */,
 				067F1FB027EC5EE50006C3AC /* MoveSenseAppApp.swift */,
 				067F1FB227EC5EE50006C3AC /* ContentView.swift */,
@@ -526,6 +528,7 @@
 				DEVELOPMENT_TEAM = JRZ7ZT88JB;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MoveSenseApp/Info.plist;
 				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "This app uses Bluetooth for scanning peripheral devices";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -563,6 +566,7 @@
 				DEVELOPMENT_TEAM = JRZ7ZT88JB;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MoveSenseApp/Info.plist;
 				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "This app uses Bluetooth for scanning peripheral devices";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

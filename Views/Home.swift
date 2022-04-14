@@ -30,7 +30,7 @@ struct Home: View {
                             .foregroundColor(Color.white)
                             .frame(maxWidth: .infinity)
                             .background(
-                                .gray
+                                .indigo
                                     .opacity(0.8)
                             )
                     } .cornerRadius(10)
@@ -80,15 +80,17 @@ struct Home: View {
                                     .foregroundColor(.red)
                             }
                         }
-                    }.font(.headline)
+                    }
+                    .foregroundColor(.white)
+                    .font(.headline)
                     
-                    //                    .padding()
-                    //                    .frame(maxWidth: .infinity)
-                    //                    .background(
-                    //                        .gray
-                    //                        .opacity(0.8)
-                    //                    )
-                    //                    .cornerRadius(10)
+                                        .padding()
+                                       // .frame(maxWidth: .infinity)
+                                        .background(
+                                            .indigo
+                                            .opacity(0.8)
+                                        )
+                                        .cornerRadius(10)
                     
                     ZStack {
                         VStack {
@@ -104,7 +106,7 @@ struct Home: View {
                                         .padding()
                                         .frame(maxWidth: .infinity)
                                         .background(
-                                            .gray
+                                            .indigo
                                                 .opacity(0.8)
                                         )
                                         .foregroundColor(Color.white)
@@ -124,7 +126,7 @@ struct Home: View {
                                         .padding()
                                         .frame(maxWidth: .infinity)
                                         .background(
-                                            .gray
+                                            .indigo
                                                 .opacity(0.8)
                                         )
                                         .foregroundColor(Color.white)
@@ -136,7 +138,9 @@ struct Home: View {
                     }
                 }
                 .padding()
-            } .navigationBarHidden(true)
+            }
+            .preferredColorScheme(.dark)
+            .navigationBarHidden(true)
         }
     }
 }
