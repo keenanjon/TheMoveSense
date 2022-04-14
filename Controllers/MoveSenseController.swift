@@ -19,14 +19,15 @@ protocol MoveSenseiControllerDelegate: class {
 
 class MoveSenseiController: NSObject, ObservableObject{
     private let mds = MDSWrapper()
-    
-    weak var delegate: MoveSenseiControllerDelegate?
+    //var delegate: MovesenseBleControllerDelegate? { get set }
+
+    weak var delegate: MoveSenseiControllerDelegate? 
     private let jsonDecoder: JSONDecoder = JSONDecoder()
     @Published var connectedPeripherals = [Peripheral]()
     
     private var mdsVersionNumber: String?
     
-    
+    // ?
     func getInfo(serial: String) {
         mds.doGet("suunto://174430000185/Info", contract: [:],
                   completion: {[weak self] (event) in
@@ -58,6 +59,7 @@ class MoveSenseiController: NSObject, ObservableObject{
         connectedPeripherals.append(peripheral)
         print("Connect peripheral \(peripheral.name)")
         print("Connected devices on Controller \(connectedPeripherals)")
+        print("Itse delegaaatti: \(String(describing: delegate))")
         // "\(peripheral.name.components(separatedBy: " ")[1])MDS/ConnectedDevices"
         //getInfo(serial: peripheral.name.components(separatedBy: " ")[1])
         
@@ -70,13 +72,13 @@ class MoveSenseiController: NSObject, ObservableObject{
                 return
             }
             //print("RESPONSE: \(response.statusCode)")
-            //print(self.delegate)
+            print("Itse delegaaatti osa2: \(self.delegate)")
         }, onEvent: { [weak self] (event) in
             guard let this = self,
-                  let delegate = this.delegate else {
+                  let delegate = self?.delegate else {
                 NSLog("MovesenseController integrity error")
                 // TODO: Propagate error
-                //print(event)
+                print("VITTU EVENTTI: \(event)")
                 return
             }
 

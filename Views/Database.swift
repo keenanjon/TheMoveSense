@@ -38,13 +38,11 @@ struct Database: View {
                 Text("Elevator measurement 1: ")
                     .padding()
                 Text("Movesense 206: ")
-                Text("Total acceleration: \(totalAcceleration(sensorNumber: 2061))")
+                Text("Total acceleration: \(totalAccelerationElevator(sensorNumber: 2063))")
                     .padding()
                 Spacer()
-                Spacer()
-                Text("Elevator measurement 2: ")
-                Text("Movesense 206: ")
-                Text("Total acceleration: \(totalAcceleration(sensorNumber: 2062))")
+                Text("Movesense 185: ")
+                Text("Total acceleration: \(totalAccelerationElevator(sensorNumber: 1851))")
                     .padding()
             }
         }
