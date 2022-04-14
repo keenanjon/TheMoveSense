@@ -3,10 +3,17 @@ import SwiftUI
 
 struct Home: View {
     @ObservedObject var bleManager = BLEManager()
-    @ObservedObject var moveSensecontroller = MoveSenseiController()
+    
+    @ObservedObject var moveSensecontroller: MoveSenseiController
+    
     @State private var isDisplayed = false
     @State private var isScanning = false
     @State  private var toggles: [Bool] = [Bool]()
+    
+    init() {
+        let bleController = MovesenseBleControllerConcrete()
+        moveSensecontroller = MoveSenseiController(bleController: bleController)
+    }
     
     var body: some View {
         let connectedDevices = moveSensecontroller.connectedPeripherals.map {$0.name}

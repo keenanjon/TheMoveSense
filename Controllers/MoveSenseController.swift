@@ -18,7 +18,8 @@ protocol MoveSenseiControllerDelegate: class {
 
 
 class MoveSenseiController: NSObject, ObservableObject{
-    private let mds = MDSWrapper()
+    private let bleController: MovesenseBleController
+    private let mds: MDSWrapper
     
     weak var delegate: MoveSenseiControllerDelegate?
     private let jsonDecoder: JSONDecoder = JSONDecoder()
@@ -26,6 +27,96 @@ class MoveSenseiController: NSObject, ObservableObject{
     
     private var mdsVersionNumber: String?
     
+    init(bleController: MovesenseBleController) {
+        self.mds = MDSWrapper(Bundle.main, centralManager: bleController.mdsCentralManager, deviceUUIDs: nil)
+        self.bleController = bleController
+        super.init()
+        
+        mds.delegate = self
+        bleController.delegate = self
+        subscribeToDeviceConnections()
+        getMDSVersion()
+    }
+    
+    private func getMDSVersion() {
+        NSLog("MDSVERSION: \(MovesenseConstants.mdsVersion)")
+        mds.doGet(MovesenseConstants.mdsVersion,
+                         contract: [:],
+                         completion: {[weak self] (event) in
+            guard let this = self else {
+                NSLog("MovesenseController integrity error.")
+                // TODO: Propagate error
+                return
+            }
+
+            // TODO: All decoding needs to be done asynchronously since it may take arbitrary time.
+            // TODO: Do it here temporarily.
+            guard let decodedEvent = try? this.jsonDecoder.decode(MovesenseResponseContainer<String>.self,
+                                                                  from: event.bodyData) else {
+                let error = MovesenseError.decodingError("MovesenseController: unable to decode MDS version event.")
+                NSLog(error.localizedDescription)
+                this.delegate?.onControllerError(error)
+                return
+            }
+
+            this.mdsVersionNumber = decodedEvent.content
+        })
+    }
+
+    private func subscribeToDeviceConnections() {
+        
+        NSLog("MDSWRAPPER: \(MovesenseConstants.mdsVersion)")
+        
+        mds.doSubscribe(
+            "suunto://174430000206/Meas/IMU9/13",
+            contract: [:],
+            response: { (response) in
+                guard response.statusCode == MovesenseResponseCode.ok.rawValue,
+                      response.method == MDSResponseMethod.SUBSCRIBE else {
+                    NSLog("MovesenseController invalid response to connection subscription.")
+                    // TODO: Propagate error
+                    return
+                }
+            },
+            onEvent: { [weak self] (event) in
+                guard let this = self,
+                      let delegate = this.delegate else {
+                    NSLog("MovesenseController integrity error.kosajd")
+                    // TODO: Propagate error
+                    return
+                }
+
+                // TODO: All decoding needs to be done asynchronously since it may take arbitrary time.
+                // TODO: Do it here temporarily.
+                guard let decodedEvent = try? this.jsonDecoder.decode(MovesenseDeviceEvent.self,
+                                                                      from: event.bodyData) else {
+                    let error = MovesenseError.decodingError("MovesenseController: unable to decode device connection response.")
+                    NSLog(error.localizedDescription)
+                    this.delegate?.onControllerError(error)
+                    return
+                }
+
+                switch decodedEvent.eventMethod {
+                case .post:
+                    guard let deviceInfo = decodedEvent.eventBody.deviceInfo,
+                          let connectionInfo = decodedEvent.eventBody.connectionInfo else {
+                        // TODO: What happens if throw is done here?
+                        return
+                    }
+
+                    this.mds.disableAutoReconnectForDevice(withSerial: deviceInfo.serialNumber)
+                    let connection = MovesenseConnection(mdsWrapper: this.mds,
+                                                         jsonDecoder: this.jsonDecoder,
+                                                         connectionInfo: connectionInfo)
+                    delegate.deviceConnected(deviceInfo, connection)
+                case .del:
+                    delegate.deviceDisconnected(decodedEvent.eventBody.serialNumber)
+                default:
+                    NSLog("MovesenseController::subscribeToDeviceConnections unknown event method.")
+                    this.delegate?.onControllerError(MovesenseError.controllerError("Unknown event method"))
+                }
+            })
+    }
     
     func getInfo(serial: String) {
         mds.doGet("suunto://174430000185/Info", contract: [:],
@@ -62,7 +153,7 @@ class MoveSenseiController: NSObject, ObservableObject{
         //getInfo(serial: peripheral.name.components(separatedBy: " ")[1])
         
         
-        mds.doSubscribe("MDS/ConnectedDevices", contract:  [:], response: { (response) in
+        /*mds.doSubscribe("MDS/ConnectedDevices", contract:  [:], response: { (response) in
             guard response.statusCode == MovesenseResponseCode.ok.rawValue,
                   response.method == MDSResponseMethod.SUBSCRIBE else {
                 NSLog("MovesenseController invalid response to connection subscription.")
@@ -109,7 +200,7 @@ class MoveSenseiController: NSObject, ObservableObject{
                 NSLog("MovesenseController::subscribeToDeviceConnections unknown event method.")
                 this.delegate?.onControllerError(MovesenseError.controllerError("Unknown event method"))
             }
-        })
+        })*/
         
     }
     
@@ -132,6 +223,21 @@ class MoveSenseiController: NSObject, ObservableObject{
     func shutDown() {
         mds.deactivate()
     }
-    
-    
+}
+
+extension MoveSenseiController: MovesenseBleControllerDelegate {
+
+    func deviceFound(uuid: UUID, localName: String, serialNumber: String, rssi: Int) {
+        let device = MovesenseDeviceConcrete(uuid: uuid, localName: localName,
+                                      serialNumber: serialNumber, rssi: rssi)
+        delegate?.deviceDiscovered(device)
+    }
+}
+
+extension MoveSenseiController: MDSConnectivityServiceDelegate {
+
+    func didFailToConnectWithError(_ error: Error?) {
+        // NOTE: The error is a null pointer and accessing it will cause a crash
+        delegate?.onControllerError(MovesenseError.controllerError("Did fail to connect."))
+    }
 }

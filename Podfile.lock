@@ -1,5 +1,5 @@
 PODS:
-  - Movesense (1.63.0)
+  - Movesense (1.68.0)
 
 DEPENDENCIES:
   - Movesense (from `https://bitbucket.org/movesense/movesense-mobile-lib.git`)
@@ -10,11 +10,11 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   Movesense:
-    :commit: 4513b8244107789f4228f2005d403a7ce3483b64
+    :commit: 0b5bd21997b05aded8db4127da47278112dc8acd
     :git: https://bitbucket.org/movesense/movesense-mobile-lib.git
 
 SPEC CHECKSUMS:
-  Movesense: 0c7639d6797391f288855b94d074e4681007dbc2
+  Movesense: 24105140ddd6232c45802d94a37687edbca41dca
 
 PODFILE CHECKSUM: 16f3104aef917a1855ce05f616368f4b4d90b2b0
 
